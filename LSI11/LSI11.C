@@ -31,7 +31,7 @@
 
     Comments:
     - The disk emulation code is a custom "PF" (personal computer floppy) device that
-      sits at the device address for the RXV11. This may impact booting RT-11 as RT-11
+      sits at a custom device address. This may impact booting RT-11 as RT-11
       requires, I believe, the console and floppy to be at standard device addresses.
 
     - The default address for the RX11 is 177170-177173 vector 264 BR5
@@ -2089,3 +2089,4 @@ fillit(unsigned int from, unsigned int to, unsigned int val)
         iarray[from] = val;
     } while (++from <= to);
 } /* end fillit() */
+
